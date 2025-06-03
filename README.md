@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 Next.js 15 Authentication Template
 
-## Getting Started
+A modern and extensible authentication template built using **Next.js 15**, **BetterAuth**, and **Drizzle ORM**. Designed for fast, secure, and scalable full-stack applications.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- ✅ Built with **Next.js 15 App Router**
+- 🔐 Authentication powered by **BetterAuth**
+- 💃 **Drizzle ORM** for type-safe PostgreSQL database access
+- 📄 Zod schema validation
+- 🌐 Social login (Google, GitHub)
+- 🧪 Full form handling with React Hook Form
+- 💅 UI powered by **shadcn/ui** and **Tailwind CSS**
+- ⚙️ Built-in loading state, error handling, and form validation
+
+---
+
+## 🧱 Tech Stack
+
+| Tool            | Purpose                                  |
+| --------------- | ---------------------------------------- |
+| Next.js 15      | Full-stack framework (App Router)        |
+| BetterAuth      | Authentication (sign-up, sign-in, OAuth) |
+| Drizzle ORM     | SQL ORM for PostgreSQL                   |
+| Zod             | Input validation                         |
+| React Hook Form | Form state management                    |
+| Shadcn/UI       | Accessible component library             |
+| Tailwind CSS    | Utility-first CSS framework              |
+
+---
+
+## 📦 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/DhavalBhimani44/authentication-template.git
+cd authentication-template
+```
+
+### 2. Install dependencies
+
+```bash
+pnpm install
+```
+
+or
+
+```bash
+npm install
+```
+
+### 3. Set up environment variables
+
+Create a `.env` file in the root directory and add:
+
+```env
+DATABASE_URL =
+BETTER_AUTH_SECRET =
+BETTER_AUTH_URL =
+
+GITHUB_CLIENT_ID =
+GITHUB_CLIENT_SECRET =
+
+GOOGLE_CLIENT_ID =
+GOOGLE_CLIENT_SECRET =
+```
+
+You can just rename `.env.example` to `.env` and add in your credentials.
+
+---
+
+## ⚒️ Database Setup
+
+Run migrations using Drizzle:
+
+```bash
+npm db:push
+```
+
+To open drizzle studio on local pc:
+
+```bash
+npm db:studio
+```
+
+---
+
+## 🧪 Run Development Server
 
 ```bash
 npm run dev
 # or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚖️ Customization
 
-## Learn More
+- ✅ Add new providers in `authClient.signIn.social(...)`
+- ✅ Update styles via Tailwind or shadcn themes
+- ✅ Extend schema validations using Zod
+- ✅ Swap database (e.g., MySQL, SQLite) via Drizzle
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧑‍💻 Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Created by [Dhaval Bhimani](https://github.com/DhavalBhimani44)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⭐️ Feedback
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you find this project helpful, please give it a ⭐️ on GitHub!
